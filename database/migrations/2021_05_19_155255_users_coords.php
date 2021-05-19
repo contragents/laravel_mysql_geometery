@@ -14,8 +14,8 @@ class UsersCoords extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->decimal('lng',8,5,false)->nullable();
-            $table->decimal('lat',7,5,false)->nullable();
+            $table->decimal('lng',10,7,false)->nullable();
+            $table->decimal('lat',10,7,false)->nullable();
         });
     }
 
