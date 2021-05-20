@@ -32,7 +32,7 @@ class users_coords extends Seeder
                     'gps_point' => DB::Raw('POINT('.$matches[2].','.$matches[1].')')
                 ]);
                 DB::commit();
-
+                //Сделать отдельную таблицу на правильные координаты с триггером
                 $recordsProcessed ++;
             }
         }
