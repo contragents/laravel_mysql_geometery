@@ -29,8 +29,7 @@ class users_coords extends Seeder
                 'gps_point' => DB::raw("st_geomfromtext('POINT($lat $lng)', 4326, 'axis-order=lat-long')")
             ]);
 
-            DB::commit();
-        }
 
+        }
     }
 }
