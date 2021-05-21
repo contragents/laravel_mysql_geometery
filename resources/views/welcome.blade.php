@@ -33,7 +33,7 @@
         @foreach($objects as $object1)
             <tr>
                 <td>{{$object1->name}}</td>
-                <td>{{$object1->distance}}</td>
+                <td>{{round($object1->distance/1000,3)}}</td>
                 <td>{{$object1->lat}}, {{$object1->lng}}</td>
             </tr>
         @endforeach
