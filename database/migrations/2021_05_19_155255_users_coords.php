@@ -14,8 +14,9 @@ class UsersCoords extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->decimal('lng',10,7,false)->nullable();
-            $table->decimal('lat',10,7,false)->nullable();
+            $table->decimal('lng',10,7,false);
+            $table->decimal('lat',10,7,false);
+            $table->point('gps_point', 4326)->spatialIndex();
         });
     }
 
@@ -29,6 +30,7 @@ class UsersCoords extends Migration
         Schema::table('users', function (Blueprint $table) {
             $table->dropColumn('lng');
             $table->dropColumn('lat');
+            $table->dropColumn('gps_point');
         });
     }
 }
